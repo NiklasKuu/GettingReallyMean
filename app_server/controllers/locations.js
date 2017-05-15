@@ -1,6 +1,6 @@
 /* GET 'home' page */
 module.exports.homeList = function (req,res){
-    res.render('index', {title: 'home' });
+    res.render('locations-list', {title: 'Home' });
 };
 
 /* GET 'location info' page */
