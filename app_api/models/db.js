@@ -14,9 +14,9 @@ var gracefulShutdown;
 
 //var dbURI = 'mongodb://localhost/Loc8r';
 var dbURI = 'mongodb://nikke:nikke@ds137191.mlab.com:37191/loceightr';
-if (process.env.NODE_ENV === 'production') {
+/*if (process.env.NODE_ENV === 'production') {
     dbURI = process.env.MONGOLAB_URI;
-}
+}*/
 
 mongoose.connect(dbURI);
 
