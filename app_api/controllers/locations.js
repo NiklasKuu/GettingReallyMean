@@ -43,7 +43,7 @@ module.exports.locationsListByDistance = function (req, res) {
         num: 10
     };
 
-    if (!lng || !lat || !maxDistance) {
+    if ((!lng && lng!==0)||(!lat && lat!==0) ||(!maxDistance && maxDistance!=0)) {
         sendJsonResponse(res, 404, {
             message: "lng, lat and maxDistance parameters are required"
         });
@@ -110,6 +110,7 @@ module.exports.locationsReadOne = function (req, res) {
                         return;
                     }
                     sendJsonResponse(res, 200, location);
+                    
                 });
     } else {
         sendJsonResponse(res, 404, {
